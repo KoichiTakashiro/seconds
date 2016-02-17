@@ -17,6 +17,8 @@
 		C1CCB8711C7436B700CC2CEF /* secondsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8701C7436B700CC2CEF /* secondsUITests.swift */; };
 		C1CCB87F1C7436D000CC2CEF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCB87E1C7436D000CC2CEF /* AVFoundation.framework */; };
 		C1CCB8811C7436D900CC2CEF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */; };
+		C1CCB8831C74393200CC2CEF /* recordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8821C74393200CC2CEF /* recordViewController.swift */; };
+		C1CCB8851C743A4400CC2CEF /* checkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8841C743A4400CC2CEF /* checkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C1CCB8721C7436B700CC2CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1CCB87E1C7436D000CC2CEF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		C1CCB8821C74393200CC2CEF /* recordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordViewController.swift; sourceTree = "<group>"; };
+		C1CCB8841C743A4400CC2CEF /* checkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				C1CCB84D1C7436B600CC2CEF /* AppDelegate.swift */,
 				C1CCB84F1C7436B600CC2CEF /* ViewController.swift */,
+				C1CCB8821C74393200CC2CEF /* recordViewController.swift */,
+				C1CCB8841C743A4400CC2CEF /* checkViewController.swift */,
 				C1CCB8511C7436B600CC2CEF /* Main.storyboard */,
 				C1CCB8571C7436B600CC2CEF /* Assets.xcassets */,
 				C1CCB8591C7436B600CC2CEF /* LaunchScreen.storyboard */,
@@ -273,6 +279,8 @@
 				C1CCB8501C7436B600CC2CEF /* ViewController.swift in Sources */,
 				C1CCB84E1C7436B600CC2CEF /* AppDelegate.swift in Sources */,
 				C1CCB8561C7436B600CC2CEF /* seconds.xcdatamodeld in Sources */,
+				C1CCB8831C74393200CC2CEF /* recordViewController.swift in Sources */,
+				C1CCB8851C743A4400CC2CEF /* checkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
