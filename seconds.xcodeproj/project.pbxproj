@@ -15,6 +15,8 @@
 		C1CCB85B1C7436B600CC2CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CCB8591C7436B600CC2CEF /* LaunchScreen.storyboard */; };
 		C1CCB8661C7436B700CC2CEF /* secondsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8651C7436B700CC2CEF /* secondsTests.swift */; };
 		C1CCB8711C7436B700CC2CEF /* secondsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8701C7436B700CC2CEF /* secondsUITests.swift */; };
+		C1CCB87F1C7436D000CC2CEF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCB87E1C7436D000CC2CEF /* AVFoundation.framework */; };
+		C1CCB8811C7436D900CC2CEF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C1CCB86C1C7436B700CC2CEF /* secondsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secondsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CCB8701C7436B700CC2CEF /* secondsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondsUITests.swift; sourceTree = "<group>"; };
 		C1CCB8721C7436B700CC2CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1CCB87E1C7436D000CC2CEF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CCB8811C7436D900CC2CEF /* AssetsLibrary.framework in Frameworks */,
+				C1CCB87F1C7436D000CC2CEF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,8 @@
 		C1CCB8411C7436B600CC2CEF = {
 			isa = PBXGroup;
 			children = (
+				C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */,
+				C1CCB87E1C7436D000CC2CEF /* AVFoundation.framework */,
 				C1CCB84C1C7436B600CC2CEF /* seconds */,
 				C1CCB8641C7436B700CC2CEF /* secondsTests */,
 				C1CCB86F1C7436B700CC2CEF /* secondsUITests */,
