@@ -19,6 +19,9 @@
 		C1CCB8811C7436D900CC2CEF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */; };
 		C1CCB8831C74393200CC2CEF /* recordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8821C74393200CC2CEF /* recordViewController.swift */; };
 		C1CCB8851C743A4400CC2CEF /* checkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8841C743A4400CC2CEF /* checkViewController.swift */; };
+		C1CCB8871C7447BC00CC2CEF /* selectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8861C7447BC00CC2CEF /* selectViewController.swift */; };
+		C1CCB8AC1C759B6C00CC2CEF /* othersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8AB1C759B6C00CC2CEF /* othersViewController.swift */; };
+		C1CCB8AE1C75A77A00CC2CEF /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB8AD1C75A77A00CC2CEF /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		C1CCB8801C7436D900CC2CEF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C1CCB8821C74393200CC2CEF /* recordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordViewController.swift; sourceTree = "<group>"; };
 		C1CCB8841C743A4400CC2CEF /* checkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkViewController.swift; sourceTree = "<group>"; };
+		C1CCB8861C7447BC00CC2CEF /* selectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectViewController.swift; sourceTree = "<group>"; };
+		C1CCB8AB1C759B6C00CC2CEF /* othersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = othersViewController.swift; sourceTree = "<group>"; };
+		C1CCB8AD1C75A77A00CC2CEF /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				C1CCB84F1C7436B600CC2CEF /* ViewController.swift */,
 				C1CCB8821C74393200CC2CEF /* recordViewController.swift */,
 				C1CCB8841C743A4400CC2CEF /* checkViewController.swift */,
+				C1CCB8861C7447BC00CC2CEF /* selectViewController.swift */,
+				C1CCB8AB1C759B6C00CC2CEF /* othersViewController.swift */,
+				C1CCB8AD1C75A77A00CC2CEF /* detailViewController.swift */,
 				C1CCB8511C7436B600CC2CEF /* Main.storyboard */,
 				C1CCB8571C7436B600CC2CEF /* Assets.xcassets */,
 				C1CCB8591C7436B600CC2CEF /* LaunchScreen.storyboard */,
@@ -278,9 +287,12 @@
 			files = (
 				C1CCB8501C7436B600CC2CEF /* ViewController.swift in Sources */,
 				C1CCB84E1C7436B600CC2CEF /* AppDelegate.swift in Sources */,
+				C1CCB8871C7447BC00CC2CEF /* selectViewController.swift in Sources */,
 				C1CCB8561C7436B600CC2CEF /* seconds.xcdatamodeld in Sources */,
 				C1CCB8831C74393200CC2CEF /* recordViewController.swift in Sources */,
+				C1CCB8AC1C759B6C00CC2CEF /* othersViewController.swift in Sources */,
 				C1CCB8851C743A4400CC2CEF /* checkViewController.swift in Sources */,
+				C1CCB8AE1C75A77A00CC2CEF /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +517,7 @@
 				C1CCB8771C7436B700CC2CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1CCB8781C7436B700CC2CEF /* Build configuration list for PBXNativeTarget "secondsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +526,7 @@
 				C1CCB87A1C7436B700CC2CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1CCB87B1C7436B700CC2CEF /* Build configuration list for PBXNativeTarget "secondsUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +535,7 @@
 				C1CCB87D1C7436B700CC2CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

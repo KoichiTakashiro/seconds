@@ -9,11 +9,15 @@
 import UIKit
 
 class detailViewController: UIViewController {
+    
+    var recievedSelectedIndex = -1
+    var recievedSerectedDetail = ""
 
+    @IBOutlet weak var detailText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        detailText.text = recievedSerectedDetail
+        
     }
 
     override func didReceiveMemoryWarning() {
