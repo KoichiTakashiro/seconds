@@ -42,6 +42,10 @@
                                     <segue destination="oIi-QS-1pA" kind="push" id="uPC-2d-7vg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-J9-gP9">
+                                <rect key="frame" x="30" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -51,6 +55,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1156.5" y="400.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bs2-2P-Cnw">
+            <objects>
+                <viewController id="fPN-8i-qHB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sYg-dx-Ivr"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgU-Gq-1lz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rj1-jt-sVb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BU4-M8-L6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673.5" y="1252.5"/>
         </scene>
         <!--Check View Controller-->
         <scene sceneID="fDf-6R-Lm4">
@@ -63,14 +86,23 @@
                     <view key="view" contentMode="scaleToFill" id="DQV-Vn-U8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c60-3U-lFM" customClass="AVPlayerView" customModule="seconds" customModuleProvider="target">
+                                <rect key="frame" x="39" y="123" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="zq4-Rm-w0f"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="videoPlayerView" destination="c60-3U-lFM" id="RM5-m5-Y5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vO-pZ-UcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156.5" y="1266.5"/>
+            <point key="canvasLocation" x="1165.5" y="1252.5"/>
         </scene>
         <!--Others View Controller-->
         <scene sceneID="2e6-nf-1e1">
