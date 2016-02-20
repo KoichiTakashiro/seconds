@@ -10,7 +10,9 @@ import UIKit
 import AVFoundation
 import AssetsLibrary
 
-class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
+
+
+class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelegate,AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate{
 
     //ビデオのアウトプット
     private var myVideoOutPut:AVCaptureMovieFileOutput!
@@ -18,6 +20,15 @@ class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     //スタート&ストップボタン
     private var myButtonStart : UIButton!
     private var myButtonStop : UIButton!
+    
+    var videoInput:AVCaptureDeviceInput!
+    var audioInput:AVCaptureDeviceInput!
+    var output:AVCaptureVideoDataOutput!
+    var mySession:AVCaptureSession!
+    var isCapturing = false
+    var isPaused = false
+    var isDiscontinue = false
+    var fileIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +68,47 @@ class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         //バックカメラを取得
         do{
             let videoCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+            videoCaptureDevice.activeVideoMinFrameDuration = CMTimeMake(1, 30)
             let videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-            //ビデオをセッションのInputに追加
-            if (mySession.canAddInput(videoInput)){
-                mySession.addInput(videoInput)
-            }
+            
         }catch let error as NSError{
             print(error)
         }
+        
+        //ビデオをセッションのInputに追加
+        if (mySession.canAddInput(videoInput)){
+            mySession.addInput(videoInput)
+        }
+        ////ここまで情報の入力
+        
+        
+        //++ここからVine風記事参考++
+        //AVCaptureSessionにインスタンスを渡してstartRunningの呼び出し
+        let recordingQueue = dispatch_queue_create("com.KoichiTakashiro.RecordingQueue", DISPATCH_QUEUE_SERIAL)
+        var videoDataOutput = AVCaptureVideoDataOutput()
+        
+        videoDataOutput.setSampleBufferDelegate(self, queue: recordingQueue)
+        videoDataOutput.alwaysDiscardsLateVideoFrames = true
+        videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey : Int(kCVPixelFormatType_32BGRA)]
+        self.mySession.addOutput(videoDataOutput)
+        
+        var audioDataOutput = AVCaptureAudioDataOutput()
+        audioDataOutput.setSampleBufferDelegate(self, queue: recordingQueue)
+        self.mySession.addOutput(audioDataOutput)
+            
+        self.mySession.startRunning()
+        
+        //AVCaptureVideoDataOutputSampleBufferDelegateから流れてくるデータを使用
+        func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+            if !self.isCapturing || self.isPaused { // 録画開始していない、ポーズ中の場合
+                return
+            }
+            
+            // ここで保存する処理
+        }
+
+        
+        
         
         
         //セッションに出力先を追加
@@ -75,6 +119,12 @@ class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         
         //ビデオ出力をOutputに追加
         mySession.addOutput(myVideoOutPut)
+        
+        
+        
+        
+        
+        
         
         //画像を表示するレイヤーを生成
         let myVideoLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: mySession)

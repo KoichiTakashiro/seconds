@@ -10,20 +10,31 @@ import UIKit
 import AVFoundation
 import CoreMedia
 
-class checkViewController: UIViewController {
-
-    // 再生用のアイテム.
-    var playerItem : AVPlayerItem!
+class checkViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // AVPlayer.
-    var videoPlayer : AVPlayer!
-    
-    // シークバー.
-    var seekBar : UISlider!
-    
+//    @IBOutlet weak var myImageView: UIImageView!
+//    
+//    
+//    let imagePicker = UIImagePickerController()
+//    
+//    //動画再生用
+//    // 再生用のアイテム.
+//    var playerItem : AVPlayerItem!
+//    
+//    // AVPlayer.
+//    var videoPlayer : AVPlayer!
+//    
+//    // シークバー.
+//    var seekBar : UISlider!
+//
+//    
+//    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        
+//        imagePicker.delegate = self
+//        
+//        //ここから動画
 //        // パスからassetを生成.
 //        let path = NSBundle.mainBundle().pathForResource("test", ofType: "mov")
 //        let fileURL = NSURL(fileURLWithPath: path!)
@@ -36,7 +47,7 @@ class checkViewController: UIViewController {
 //        videoPlayer = AVPlayer(playerItem: playerItem)
 //        
 //        // Viewを生成.
-//        let videoPlayerView = AVPlayerView(frame: self.view.bounds)
+//        //let videoPlayerView = AVPlayerView(frame: self.view.bounds)
 //        
 //        // UIViewのレイヤーをAVPlayerLayerにする.
 //        let layer = videoPlayerView.layer as! AVPlayerLayer
@@ -44,7 +55,7 @@ class checkViewController: UIViewController {
 //        layer.player = videoPlayer
 //        
 //        // レイヤーを追加する.
-//        self.view.layer.addSublayer(layer)
+//        //self.view.layer.addSublayer(layer)
 //        
 //        // 動画のシークバーとなるUISliderを生成.
 //        seekBar = UISlider(frame: CGRectMake(0, 0, self.view.bounds.maxX - 100, 50))
@@ -69,7 +80,7 @@ class checkViewController: UIViewController {
 //        videoPlayer.addPeriodicTimeObserverForInterval(time, queue: nil) { (time) -> Void in
 //            
 //            // 総再生時間を取得.
-//            let duration = CMTimeGetSeconds(self.videoPlayer.currentItem!.duration)
+//            let duration = CMTimeGetSeconds(self.videoPlayer.currentItem.duration)
 //            
 //            // 現在の時間を取得.
 //            let time = CMTimeGetSeconds(self.videoPlayer.currentTime())
@@ -88,8 +99,37 @@ class checkViewController: UIViewController {
 //        startButton.setTitle("Start", forState: UIControlState.Normal)
 //        startButton.addTarget(self, action: "onButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
 //        self.view.addSubview(startButton)
+//        
 //    }
 //    
+//    @IBAction func btnTap(sender: UIButton) {
+//        
+//        imagePicker.allowsEditing = false
+//        //imagePicker.mediaTypes = []
+//        imagePicker.sourceType = .PhotoLibrary
+//        
+//        presentViewController(imagePicker, animated: true, completion: nil)
+//    }
+//    
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//            myImageView.contentMode = .ScaleAspectFit
+//            myImageView.image = pickedImage
+//        }
+//        
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+//    
+//    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+//    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        
+//    }
+//    
+//    //動画用
 //    // 再生ボタンが押された時に呼ばれるメソッド.
 //    func onButtonClick(sender : UIButton){
 //        
@@ -106,10 +146,12 @@ class checkViewController: UIViewController {
 //        videoPlayer.seekToTime(CMTimeMakeWithSeconds(Float64(seekBar.value), Int32(NSEC_PER_SEC)))
 //        
 //    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+//    
+//    
+//    
+//    
+//    
+//    
 //    
 //    
 //    /*
@@ -121,5 +163,5 @@ class checkViewController: UIViewController {
 //    // Pass the selected object to the new view controller.
 //    }
 //    */
-//    
+    
 }
