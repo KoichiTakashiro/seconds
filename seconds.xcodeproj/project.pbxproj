@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1C505DE1C7858FE007574AA /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C505DD1C7858FE007574AA /* AVPlayerView.swift */; };
+		C1C505E11C786C65007574AA /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = C1C505E01C786C65007574AA /* test.mov */; };
 		C1CCB84E1C7436B600CC2CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB84D1C7436B600CC2CEF /* AppDelegate.swift */; };
 		C1CCB8501C7436B600CC2CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCB84F1C7436B600CC2CEF /* ViewController.swift */; };
 		C1CCB8531C7436B600CC2CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CCB8511C7436B600CC2CEF /* Main.storyboard */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1C505DD1C7858FE007574AA /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		C1C505DF1C78653E007574AA /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		C1C505E01C786C65007574AA /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
 		C1CCB84A1C7436B600CC2CEF /* seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CCB84D1C7436B600CC2CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1CCB84F1C7436B600CC2CEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,9 +126,12 @@
 				C1CCB84F1C7436B600CC2CEF /* ViewController.swift */,
 				C1CCB8821C74393200CC2CEF /* recordViewController.swift */,
 				C1CCB8841C743A4400CC2CEF /* checkViewController.swift */,
+				C1C505DD1C7858FE007574AA /* AVPlayerView.swift */,
 				C1CCB8861C7447BC00CC2CEF /* selectViewController.swift */,
 				C1CCB8AB1C759B6C00CC2CEF /* othersViewController.swift */,
 				C1CCB8AD1C75A77A00CC2CEF /* detailViewController.swift */,
+				C1C505E01C786C65007574AA /* test.mov */,
+				C1C505DF1C78653E007574AA /* test.mp4 */,
 				C1CCB8511C7436B600CC2CEF /* Main.storyboard */,
 				C1CCB8571C7436B600CC2CEF /* Assets.xcassets */,
 				C1CCB8591C7436B600CC2CEF /* LaunchScreen.storyboard */,
@@ -258,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C505E11C786C65007574AA /* test.mov in Resources */,
 				C1CCB85B1C7436B600CC2CEF /* LaunchScreen.storyboard in Resources */,
 				C1CCB8581C7436B600CC2CEF /* Assets.xcassets in Resources */,
 				C1CCB8531C7436B600CC2CEF /* Main.storyboard in Resources */,
@@ -291,6 +300,7 @@
 				C1CCB8561C7436B600CC2CEF /* seconds.xcdatamodeld in Sources */,
 				C1CCB8831C74393200CC2CEF /* recordViewController.swift in Sources */,
 				C1CCB8AC1C759B6C00CC2CEF /* othersViewController.swift in Sources */,
+				C1C505DE1C7858FE007574AA /* AVPlayerView.swift in Sources */,
 				C1CCB8851C743A4400CC2CEF /* checkViewController.swift in Sources */,
 				C1CCB8AE1C75A77A00CC2CEF /* detailViewController.swift in Sources */,
 			);

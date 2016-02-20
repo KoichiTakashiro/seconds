@@ -140,6 +140,11 @@ class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         }
     }
     
+    //動画のキャプチャーが開始された時に呼ばれるメソッド
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAtURL fileURL: NSURL!, fromConnections connections: [AnyObject]!) {
+        print("didStartRecordingToOutputFileAtURL")
+    }
+    
     //動画がキャプチャーされた後に呼ばれるメソッド
     func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
         print("didFinishRecordingToOutputFileAtURL")
@@ -151,10 +156,7 @@ class recordViewController: UIViewController, AVCaptureFileOutputRecordingDelega
         
     }
     
-    //動画のキャプチャーが開始された時に呼ばれるメソッド
-    func captureOutput(captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAtURL fileURL: NSURL!, fromConnections connections: [AnyObject]!) {
-        print("didStartRecordingToOutputFileAtURL")
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
